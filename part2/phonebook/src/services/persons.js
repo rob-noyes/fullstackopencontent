@@ -13,7 +13,6 @@ const create = newObject => {
 }
 
 const update = (id, personUpdate) => {
-    console.groupCollapsed(id, personUpdate)
     const request = axios.put(`${baseUrl}/${id}`, personUpdate)
     return request.then(response => response.data)
 }
